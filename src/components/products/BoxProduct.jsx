@@ -12,7 +12,6 @@ export default function BoxProduct() {
   
   useEffect(() => {
     fetchProducts();
-    console.log(products);
   }, []);
 
   return (
@@ -32,15 +31,15 @@ export default function BoxProduct() {
               </div>
               <div className="mt-4 flex justify-between">
                 <div>
-                  <h3 className="text-sm text-gray-700">
+                  <h3 className="text-sm text-gray-900">
                     <a href=''>
                       <span aria-hidden="true" className="absolute inset-0" />
                       {product.plato}
                     </a>
                   </h3>
-                  <p className="mt-1 text-sm text-gray-500">{product.color}</p>
+                  <p className="mt-1 text-sm text-gray-500">{product.productRestaurant.nombre}</p>
                 </div>
-                <p className="text-sm font-medium text-gray-900">{product.price}</p>
+                <p className="text-sm font-medium text-gray-700">{`$${product.precio}`}</p>
               </div>
             </div>
           ))}
